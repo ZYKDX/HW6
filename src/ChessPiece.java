@@ -1,4 +1,3 @@
-import java.awt.*;
 public interface ChessPiece
     {
         public int getRow();

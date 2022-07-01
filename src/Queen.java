@@ -7,6 +7,7 @@ public class Queen implements ChessPiece {
     public Queen(int row, int column, Color color) {
         this.row = row;
         this.column = column;
+        this.color =color;
     }
 
     public int getColumn() {
@@ -51,7 +52,7 @@ public class Queen implements ChessPiece {
 
     public boolean canKill(ChessPiece piece){
         //if queen can move to piece location and the color is opposite it returns true. Else false
-        return canMove(piece.getColumn(), piece.getRow()) && (this.color != piece.getColor());
+        return (canMove(piece.getColumn(), piece.getRow()) && (this.color != piece.getColor()));
     }
 }
 

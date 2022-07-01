@@ -27,7 +27,7 @@ public class Rook implements ChessPiece {
 
     public boolean canKill(ChessPiece piece) {
        // below checks if it's in same column or row first then checks if color is different.
-        return piece.getColumn() == this.column || piece.getRow() == this.row && this.color != piece.getColor();
+        return ((piece.getColumn() == this.column || piece.getRow() == this.row )&& this.color != piece.getColor());
     }
 
     public void setColumn(int column) {
