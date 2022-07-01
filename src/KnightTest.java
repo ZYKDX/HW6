@@ -11,10 +11,10 @@ class KnightTest {
     private Knight otherPiece4;
     @org.junit.jupiter.api.BeforeEach
     void setUp() {
-        piece1 = new Knight(0,1,Color.WHITE);
-        piece2 = new Knight(0,6,Color.WHITE);
-        piece3 = new Knight(7,1,Color.BLACK);
-        piece4 = new Knight(7,6,Color.BLACK);
+        piece1 = new Knight(0,1, Color.WHITE);
+        piece2 = new Knight(0,6, Color.WHITE);
+        piece3 = new Knight(7,1, Color.BLACK);
+        piece4 = new Knight(7,6, Color.BLACK);
         otherPiece1 = new Knight(2,0, Color.BLACK);
         otherPiece2 = new Knight(2,7, Color.BLACK);
         otherPiece3 = new Knight(6,3, Color.WHITE);

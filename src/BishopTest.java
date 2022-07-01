@@ -13,14 +13,14 @@ class BishopTest {
 
     @org.junit.jupiter.api.BeforeEach
     void setUp() {
-        piece1 = new Bishop(0,2,Color.WHITE);
-        piece2 = new Bishop(0,5,Color.WHITE);
-        piece3 = new Bishop(7,2,Color.BLACK);
-        piece4 = new Bishop(7,5,Color.BLACK);
-        otherPiece1 = new Bishop(2,0,Color.BLACK);
-        otherPiece2 = new Bishop(3,2,Color.BLACK);
-        otherPiece3 = new Bishop(4,5,Color.WHITE);
-        otherPiece4 = new Bishop(2,0,Color.WHITE);
+        piece1 = new Bishop(0,2, Color.WHITE);
+        piece2 = new Bishop(0,5, Color.WHITE);
+        piece3 = new Bishop(7,2, Color.BLACK);
+        piece4 = new Bishop(7,5, Color.BLACK);
+        otherPiece1 = new Bishop(2,0, Color.BLACK);
+        otherPiece2 = new Bishop(3,2, Color.BLACK);
+        otherPiece3 = new Bishop(4,5, Color.WHITE);
+        otherPiece4 = new Bishop(2,0, Color.WHITE);
     }
 
     @org.junit.jupiter.api.AfterEach

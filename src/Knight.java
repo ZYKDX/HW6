@@ -61,7 +61,7 @@ public class Knight implements ChessPiece
 
     private boolean validPosition(int row, int column)
     {
-        if(row<0 || row>7 || column<0 || column>7) return false;
+        if(row < 0 || row > 7 || column < 0 || column > 7) return false;
         return true;
     }
 }
