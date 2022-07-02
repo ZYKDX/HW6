@@ -10,22 +10,21 @@ public class Pawn implements ChessPiece {
         this.color = color;
     }
 
-    @Override
+
     public int getRow() {
         return this.row;
     }
 
-    @Override
     public int getColumn() {
         return this.col;
     }
 
-    @Override
+
     public Color getColor() {
         return this.color;
     }
 
-    @Override
+
     public boolean canMove(int row, int col) {
         if (!ChessPiece.isValidTarget(row, col)) {
             return false;
@@ -37,7 +36,7 @@ public class Pawn implements ChessPiece {
         }
 
         if (this.getColor().equals(Color.BLACK)) {
-            if (row == this.getRow() - 1 || this.getRow() - 1  > row) {
+            if (row == this.getRow()  - 1 ) {
                 return true;
             }
         }
@@ -76,6 +75,19 @@ public class Pawn implements ChessPiece {
     {
         if(row < 0 || row > 7 || column < 0 || column > 7)
             return false;
+        return true;
+    }
+    public boolean locationCheck(int row, int col) {
+        if (this.getColor().equals(Color.WHITE) && row == 0) {
+            // pawn can't be in the first line as it can't move backward
+            return false;
+        }
+
+        if (this.getColor().equals(Color.BLACK) && row == 7) {
+            // pawn can't be in the first line as it can't move backward
+            return false;
+        }
+
         return true;
     }
 }
