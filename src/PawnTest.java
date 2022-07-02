@@ -66,7 +66,7 @@ class PawnTest {
     void canKill() {
         assertTrue(piece1.canKill(otherPiece1));//can kill diagonal target pieces
         assertFalse(piece2.canKill(piece2));//can not kill itself
-        assertTrue(piece3.canKill(otherPiece3));//can kill diagonal target pieces and opsite color
-        assertTrue(!piece4.canKill(otherPiece4));
+        assertTrue(piece3.canKill(otherPiece3));//can kill diagonal target pieces and opposite.
+        assertTrue(!piece4.canKill(otherPiece4));// can't kill pieces backward
     }
 }
