@@ -41,6 +41,7 @@ public class Bishop implements ChessPiece
             System.out.println("Invalid position!");
             return false;
         }
+        if(row==this.row && column==this.column) return false;
         return Math.abs(this.row-row)==Math.abs(this.column-column);
     }
 
