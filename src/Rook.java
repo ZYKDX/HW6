@@ -4,22 +4,16 @@ public class Rook implements ChessPiece {
     private Color color;
 
 
-    public Rook(int row, int column, Color  Color) {
-        setRow(row);
-        setColumn(column);
-        setColor(Color);
+    public Rook(int row, int column, Color  color) {
+      if((column >= 0 && column < 8) && (row >= 0 && row < 8)) {
+          this.row = row;
+          this.column = column;
+          this.color = color;
+      }else{
+          System.out.println("not valid row/column must be greater than or equal to 0 and less than 8.");
+      }
 
     }
-    /* setter version below. to be deleted
-    public void canMove(int row, int column) {
-        if (this.row == row || this.column == column)//need to update for if obstructed)
-        {   setColumn(column);
-            setRow(row);
-        } else {
-            System.out.println("cannot move in this direction. Must be horizontal or vertical.");
-        }
-    }
-    */
     public boolean canMove(int row, int col) {
         return ((this.row == row || this.column == col));//need to update for if obstructed)
 
@@ -30,19 +24,6 @@ public class Rook implements ChessPiece {
         return ((piece.getColumn() == this.column || piece.getRow() == this.row )&& this.color != piece.getColor());
     }
 
-    public void setColumn(int column) {
-        if(column>=0 && column<8){
-        this.column = column;}
-    }
-
-
-    public void setRow(int row) {
-        if(row>=0 && column <8){
-        this.row = row;}
-    }
-
-    public void setColor(Color color){
-    this.color = color;}
 
     public int getColumn() {
         return column;

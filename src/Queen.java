@@ -4,10 +4,14 @@ public class Queen implements ChessPiece {
 
     private Color color;
 
-    public Queen(int row, int column, Color color) {
+    public Queen(int row, int column, Color color){
+        if ((column >= 0 && column < 8) && (row >= 0 && row < 8)){
         this.row = row;
         this.column = column;
         this.color =color;
+        }else{
+            System.out.println("invalid row/column must be between 0-8");
+    }
     }
 
     public int getColumn() {
@@ -21,19 +25,6 @@ public class Queen implements ChessPiece {
         return this.color;
     }
 
-    // to be deleted don't need setters.
-
-    public void setRow(int row) {
-        if (row >= 0 && row < 8) {
-            this.row = row;
-        }
-    }
-// to be deleted don't need setters
-    public void setColumn(int column) {
-        if(column >= 0 && column < 8){
-            this.column = column;
-        }
-    }
 
 
     public boolean canMove(int col, int row) {
@@ -43,7 +34,7 @@ public class Queen implements ChessPiece {
             {if (this.row == row || this.column == col) {
                 return true;
                 //if diagonal below
-            } else return (Math.abs(this.row - row) == Math.abs(this.column - col));
+            } else return ((Math.abs(this.row - row) == Math.abs(this.column - col)));
         }
         }
         //if invalid location below
