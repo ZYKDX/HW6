@@ -41,6 +41,7 @@ public class Knight implements ChessPiece
             System.out.println("Invalid position!");
             return false;
         }
+        if(row==this.row && column==this.column) return false;
         if(Math.abs(this.row-row)==2 && Math.abs(this.column-column)==1) return true;
         else if(Math.abs(this.row-row)==1 && Math.abs(this.column-column)==2) return true;
         else return false;
