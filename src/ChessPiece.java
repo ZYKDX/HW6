@@ -1,9 +1,9 @@
 public interface ChessPiece {
-        public int getRow();
-        public int getColumn();
-        public Color getColor();
-        public boolean canMove(int row, int column);
-        public boolean canKill(ChessPiece piece);
+         int getRow();
+         int getColumn();
+         Color getColor();
+         boolean canMove(int row, int column);
+         boolean canKill(ChessPiece piece);
 
         static boolean isValidTarget(int row, int col) {
             return (row >= 0 && row < 8) && (col >= 0 && col < 8);
